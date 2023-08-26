@@ -1,8 +1,27 @@
 - If we write a query that retrieves data from the selected database, we don't need to specify the database name.
 - If we write a query to retrieve data from the selected database, there's no need to specify the database name.
+
 SELECT ID, CUSTOMER, CITY, BIRTHDATE, DISTRICT, GENDER
 FROM CUSTOMER
 
+
+
 - When writing a query to retrieve data from another database, we need to specify the database name as well. 
+
 SELECT ID, CUSTOMER, CITY, BIRTHDATE, DISTRICT, GENDER
 FROM ETRADE.DBO.CUSTOMER
+
+
+
+- When writing all column names, we can use two methods:
+
+1. Select 'Columns' on the left side of the interface, then either drag it directly into the query or copy it with Ctrl+C and paste it into the query
+2. Write '*' after the Select command.
+
+
+
+- If a column name consists of two or more nouns and there are spaces between these nouns, It will give an error when we write the column names in the query without using [ ].
+- If a column name consists of two or more nouns with spaces between them, it will produce an error when we write the column names in the query without enclosing them in square brackets.
+
+SELECT ID, CUSTOMERNAME, CITY, DISTRICT, BIRTHDATE, GENDER, [PHONE NUMBER]
+FROM ETRADE.dbo.CUSTOMER
