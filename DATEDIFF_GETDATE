@@ -1,0 +1,13 @@
+ID, CUSTOMERNAME, CITY, DISTRICT, BIRTHDATE, GENDER, PHONE_NUMBER are the columns of CUSTOMER table
+
+- Now, we will add an AGE column to our CUSTOMER table
+- However, when we execute the SELECT * FROM CUSTOMER, there will be NULL in the AGE column
+- Therefore, in order to populate these cells with ages, we will use UPDATE - SET commands like the following, utilizing DATEDIFF and GETDATE functions to calculate ages.
+
+
+UPDATE CUSTOMER
+SET AGE = DATEDIFF(YEAR,BIRTHDATE,GETDATE())
+
+
+- DATEDIFF: Helps us calculate the date difference in terms of years, months, or days.
+- GETDATE: Retrieves today's date.
