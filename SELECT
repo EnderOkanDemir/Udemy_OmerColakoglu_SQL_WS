@@ -1,0 +1,8 @@
+- If we write a query that retrieves data from the selected database, we don't need to specify the database name.
+- If we write a query to retrieve data from the selected database, there's no need to specify the database name.
+SELECT ID, CUSTOMER, CITY, BIRTHDATE, DISTRICT, GENDER
+FROM CUSTOMER
+
+- When writing a query to retrieve data from another database, we need to specify the database name as well. 
+SELECT ID, CUSTOMER, CITY, BIRTHDATE, DISTRICT, GENDER
+FROM ETRADE.DBO.CUSTOMER
