@@ -1,2 +1,2 @@
-This command help us to clear the table
+This command helps us to clear the table without deleting it.
 TRUNCATE TABLE CUSTOMER
