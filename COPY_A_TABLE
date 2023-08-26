@@ -1,0 +1,4 @@
+- If we want to copy the entire table we use the query as follows
+- If we want to copy the entire table, we use the following query
+
+SELECT * INTO CUSTOMERCOPY FROM CUSTOMER
