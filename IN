@@ -1,0 +1,10 @@
+SELECT *
+FROM CUSTOMER
+WHERE CITY ='İzmir' 
+AND DISTRICT IN('Torbalı', 'Konak')
+
+
+SELECT *
+FROM CUSTOMER
+WHERE CITY ='İzmir' 
+AND DISTRICT NOT IN('Torbalı', 'Konak')
