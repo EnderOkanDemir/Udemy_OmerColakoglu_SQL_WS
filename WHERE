@@ -96,6 +96,7 @@ SELECT *
 FROM CUSTOMER
 WHERE AGE BETWEEN 25 AND 27
 
+
 -- We can retrieve the same result by using the AND command like the following but using BETWEEN is more comfortable in that kind of searching
 -- We can achieve the same result by using the AND command as shown below, but using BETWEEN is more convenient for this type of search.
 SELECT * 
@@ -158,6 +159,19 @@ WHERE ID = 1
 
 DELETE FROM CUSTOMER
 WHERE CUSTOMERNAME LIKE 'SERHAT%'
+
+
+UPDATE CUSTOMER
+SET GENDER = 'ERKEK'
+WHERE GENDER ='E'
+
+-- String or binary data would be truncated in table 'ETRADE.dbo.CUSTOMER', column 'GENDER'. Truncated value: 'E'.
+-- The statement has been terminated.
+
+-- If we encounter the error as shown above, we should change the Data Type of the 'Gender' column from varchar(1) to varchar(10).
+-- To achieve this, follow the steps shown below: 
+-- Tools - Options - Designers - Table and Database Designers - Prevent saving changes that require table re-creation
+
 
 
 
