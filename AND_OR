@@ -1,0 +1,10 @@
+SELECT *
+FROM CUSTOMER
+WHERE CUSTOMERNAME LIKE 'SA%' AND CITY = 'İSTANBUL'
+
+
+-- Being One of the conditions is true is enough for 'OR' command
+-- One of the conditions being true is sufficient for the 'OR' command
+SELECT *
+FROM CUSTOMER
+WHERE CUSTOMERNAME LIKE 'SAMİ%' OR CITY = 'İSTANBUL'
