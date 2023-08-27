@@ -1,0 +1,3 @@
+MSSQL             : TOP
+POSTGRESQL, MYSQL : LIMIT
+ORACLE            : ROWNUM
