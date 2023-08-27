@@ -3,9 +3,55 @@
 >=          : Greater than or equal to
 <=          : Less than or equal to
 BETWEEN     : Used to specify a range between two values
-LIKE        : Starts with, end with, include (It's often uses with wildcard characters to match patterns.
-IN          : Used to filter rows whrer a column's value matches any value in a specified list
+LIKE        : Starts with, end with, include (It's often used with wildcard characters to match patterns.
+IN          : Used to filter rows where a column's value matches any value in a specified list
 
 SELECT * FROM employees WHERE department_id IN (101, 102, 103);
 - In this query, the "IN" operator is used to retrieve all rows from the "employees" table where the "department_id" column matches any of the values in the list (101, 102, 103). 
 - This allows you to efficiently filter data based on multiple possible values for a column.
+
+
+SELECT * 
+FROM CUSTOMER
+WHERE CUSTOMERNAME = 'Mina MİKYAZ'
+
+SELECT * 
+FROM CUSTOMER
+WHERE CUSTOMERNAME = 'Mina Mikyaz'
+
+
+SELECT * 
+FROM CUSTOMER
+WHERE CUSTOMERNAME LIKE('Mi%')
+
+
+SELECT * 
+FROM CUSTOMER
+WHERE AGE = 42
+
+
+SELECT * 
+FROM CUSTOMER
+WHERE CITY = 'İZMİR'
+
+
+SELECT *
+FROM CUSTOMER
+WHERE PHONE_NUMBER LIKE('0532%')
+
+
+SELECT *
+FROM CUSTOMER
+WHERE BIRTHDATE LIKE('1985%')
+
+
+- We can write the query without using spaces, dashes, or periods.
+SELECT *
+FROM CUSTOMER
+WHERE BIRTHDATE = '19951005'
+
+
+SELECT *
+FROM CUSTOMER
+WHERE BIRTHDATE <> '19951005'
+
