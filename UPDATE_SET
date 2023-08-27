@@ -18,3 +18,15 @@ SET AGE = AGE + 1
 
 UPDATE CUSTOMER
 SET AGE = AGE - 1 
+
+
+UPDATE CUSTOMER
+SET GENDER = 'ERKEK'
+WHERE GENDER ='E'
+
+-- String or binary data would be truncated in table 'ETRADE.dbo.CUSTOMER', column 'GENDER'. Truncated value: 'E'.
+-- The statement has been terminated.
+
+-- If we encounter the error as shown above, we should change the Data Type of the 'Gender' column from varchar(1) to varchar(10).
+-- To achieve this, follow the steps shown below: 
+-- Tools - Options - Designers - Table and Database Designers - Prevent saving changes that require table re-creation
