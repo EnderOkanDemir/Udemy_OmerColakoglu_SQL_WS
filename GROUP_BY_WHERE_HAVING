@@ -65,3 +65,37 @@ ORDER BY 2 DESC
 -- Using aggregate and WHERE functions together can result in an error.
 -- Therefore, we used HAVING instead of WHERE not to get an error
 -- Therefore, we used HAVING instead of WHERE to avoid errors.
+
+
+-- Daily total sales amount.
+-- Total daily sales amount.
+-- Amount of daily sales totals.
+
+
+SELECT *
+FROM SALES
+WHERE BRANCH = 'Bursa Subesi' AND DATE_ = '20170105'
+
+
+SELECT BRANCH AS SUBE, DATE_ AS TARIH, COUNT(*) AS SATIRSAYISI, SUM(LINENET) AS TOPLAMSATIS
+FROM SALES
+WHERE BRANCH = 'Bursa Subesi' AND DATE_ = '20170105'
+GROUP BY BRANCH, DATE_
+
+
+SELECT BRANCH AS SUBE, DATE_ AS TARIH, COUNT(*) AS SATIRSAYISI, SUM(LINENET) AS TOPLAMSATIS
+FROM SALES
+WHERE BRANCH = 'Bursa Subesi'
+GROUP BY BRANCH, DATE_
+ORDER BY DATE_
+
+
+SELECT BRANCH AS SUBE, DATE_ AS TARIH, COUNT(*) AS SATIRSAYISI, SUM(LINENET) AS TOPLAMSATIS
+FROM SALES
+WHERE BRANCH = 'Bursa Subesi'
+GROUP BY BRANCH, DATE_
+HAVING SUM(LINENET) > 500
+ORDER BY DATE_
+
+
+SELECT 81*100
