@@ -22,6 +22,7 @@ FROM ETRADE.DBO.CUSTOMER
 
 - If a column name consists of two or more nouns and there are spaces between these nouns, It will give an error when we write the column names in the query without using [ ].
 - If a column name consists of two or more nouns with spaces between them, it will produce an error when we write the column names in the query without enclosing them in square brackets.
+- If a column name contains spaces or special characters, you must use delimiters (such as square brackets in SQL Server) around the column name in every query.
 
 SELECT ID, CUSTOMERNAME, CITY, DISTRICT, BIRTHDATE, GENDER, [PHONE NUMBER]
 FROM ETRADE.dbo.CUSTOMER
