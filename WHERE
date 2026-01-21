@@ -173,5 +173,43 @@ WHERE GENDER ='E'
 
 
 
-
-
+SELECT * FROM CUSTOMER								
+Where City='Tunceli'								
+AND District='Mazgirt' 								
+OR District='Hozat'								
+								
+-- So this will return:								
+-- All customers in Tunceli + Mazgirt								
+-- PLUS everyone in Hozat, even if they are NOT in Tunceli								
+-- Output:								
+-- ID	  CustomerName	    City	    District	  BirthDate	  Gender	  PhoneNumber	Age	
+-- 386	Meliha BABAHAN	  Elazığ	  Hozat	      2.06.1992	  K	        5351642354	34	
+-- 582	Rahime MUTLU	    Tunceli	  Hozat	      3.08.1982	  K	        5346110339	44	
+-- 745	Hazal KARATAŞOĞLU	Tunceli	  Mazgirt	    17.01.1995	K	        5371406737	31	
+								
+								
+SELECT * FROM CUSTOMER								
+Where City='Tunceli'								
+AND (District='Mazgirt' OR District= 'Hozat')								
+								
+-- This query returns only customers who are in the city of Tunceli and whose district is either Mazgirt or Hozat.								
+-- Customers in Tunceli + Mazgirt								
+-- Customers in Tunceli + Hozat ✅								
+-- The parentheses group the OR conditions so they are evaluated together before applying the AND condition, ensuring that both districts are filtered within the same city.								
+-- Output:								
+-- ID	  CustomerName	    City	    District	  BirthDate	  Gender	  PhoneNumber	Age	
+-- 582	Rahime MUTLU	    Tunceli	  Hozat	      3.08.1982	  K	        5346110339	44	
+-- 745	Hazal KARATAŞOĞLU	Tunceli	  Mazgirt	    17.01.1995	K	        5371406737	31	
+								
+								
+SELECT * FROM CUSTOMER								
+Where City='Tunceli'								
+AND District IN('Mazgirt','Hozat')								
+								
+-- This returns only:								
+-- Customers in Tunceli + Mazgirt								
+-- Customers in Tunceli + Hozat ✅													
+-- Output:								
+-- ID	  CustomerName	    City	    District	  BirthDate	  Gender	  PhoneNumber	Age	
+-- 582	Rahime MUTLU	    Tunceli	  Hozat	      3.08.1982	  K	        5346110339	44	
+-- 745	Hazal KARATAŞOĞLU	Tunceli	  Mazgirt	    17.01.1995	K	        5371406737	31	
