@@ -14,10 +14,10 @@ SELECT * FROM CUSTOMER
 WHERE CustomerName LIKE 'Soner%'									
 -- output:	3 rows								
 									
-ID	CustomerName	      City	      District	    BirthDate	  Gender	PhoneNumber	  Age		
-14	Soner ÜLGEN	        Elazığ	    Alacakaya	    30.12.1940	E	      5344531131	  86		
-656	Soner EZHER	        Eskişehir	  Mihalıççık	  11.12.1961	E	      5332892326	  65		
-967	Soner KUMBULOĞLU	  İstanbul	  Beylikdüzü	  27.03.1941	E	      5371909192	  85					
+ID	CustomerName	    City	      	District	    BirthDate	  Gender	PhoneNumber	  Age		
+14	Soner ÜLGEN	        Elazığ	    	Alacakaya	    30.12.1940		E	    5344531131	  86		
+656	Soner EZHER	        Eskişehir	 	Mihalıççık	 	11.12.1961		E	    5332892326	  65		
+967	Soner KUMBULOĞLU	İstanbul	 	Beylikdüzü	  	27.03.1941		E	    5371909192	  85					
 									
 									
 Query2:									
