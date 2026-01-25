@@ -3,8 +3,58 @@ FROM CUSTOMER
 WHERE CUSTOMERNAME LIKE 'SA%' AND CITY = 'İSTANBUL'
 
 
--- Being One of the conditions is true is enough for 'OR' command
+-- Being one of the conditions true is enough for the 'OR' command
 -- One of the conditions being true is sufficient for the 'OR' command
 SELECT *
 FROM CUSTOMER
 WHERE CUSTOMERNAME LIKE 'SAMİ%' OR CITY = 'İSTANBUL'
+
+Query1:
+SELECT * FROM CUSTOMER									
+WHERE CustomerName LIKE 'Soner%'									
+-- output:	3 rows								
+									
+ID	CustomerName	      City	      District	    BirthDate	  Gender	PhoneNumber	  Age		
+14	Soner ÜLGEN	        Elazığ	    Alacakaya	    30.12.1940	E	      5344531131	  86		
+656	Soner EZHER	        Eskişehir	  Mihalıççık	  11.12.1961	E	      5332892326	  65		
+967	Soner KUMBULOĞLU	  İstanbul	  Beylikdüzü	  27.03.1941	E	      5371909192	  85					
+									
+									
+Query2:									
+SELECT * FROM CUSTOMER									
+WHERE City = 'Elazığ'									
+-- output:	11 rows								
+									
+ID	CustomerName	      City	      District	    BirthDate	 Gender   PhoneNumber	  Age		
+14	Soner ÜLGEN	        Elazığ	    Alacakaya	    30.12.1940	E	      5344531131	  86		
+212	Kevser ELMAGÖZ	    Elazığ	    Elazığ Merkez	29.06.1996	K	      5322967028	  30		
+386	Meliha BABAHAN	    Elazığ	    Hozat	        2.06.1992	  K	      5351642354	  34		
+389	Bedriye AZGIT	      Elazığ	    Baskil	      19.08.1984	K	      5346343447	  42		
+515	Hamide TÖRELİ	      Elazığ	    Elazığ Merkez	15.11.1964	K	      5332442653	  62		
+524	Salih TURUÇALI	    Elazığ	    Karakoçan	    11.05.1965	E	      5321497597	  61		
+738	Yeter ATSAN	        Elazığ	    Elazığ Merkez	18.02.1987	K	      5367007055	  39		
+791	Semih SURETTİ	      Elazığ	    Elazığ Merkez	23.04.1998	E	      5333544432	  28		
+800	Nuri İŞBİTİR	      Elazığ	    Baskil	      17.11.1973	E	      5328944169	  53		
+991	Hiranur SAĞ.HİZ.	  Elazığ	    Karakoçan    	9.11.1955	  K	      5325624603	  71		
+993	Cansu BOYLA	        Elazığ	    Ağın	        29.09.1970	K	      5333473849	  56		
+									
+
+Query3:
+SELECT * FROM CUSTOMER									
+WHERE CustomerName LIKE 'Soner%'									
+AND									
+City = 'Elazığ'									
+-- output:	1 row								
+									
+ID	CustomerName	City	District	BirthDate	Gender	PhoneNumber	Age		
+14	Soner ÜLGEN	Elazığ	Alacakaya	30.12.1940	E	5344531131	86		
+									
+									
+Query4:									
+SELECT * FROM CUSTOMER									
+WHERE CustomerName LIKE 'Soner%'									
+OR									
+City = 'Elazığ'									
+-- output:	13 rows	=	11 rows		           +	3 rows		           -	1 row
+			                WHERE City='Elazığ'			WHERE LIKE 'Soner%'			common row between Query1 and Query2
+
