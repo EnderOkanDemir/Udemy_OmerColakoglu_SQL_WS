@@ -3,6 +3,8 @@ POSTGRESQL       : LIMIT
 MYSQL	         : LIMIT
 ORACLE	         : ROWNUM
 
+The SELECT statement needs to know what it will select. That means at least one column name or * (everything) must be specified.
+
 
 
 SELECT * 
