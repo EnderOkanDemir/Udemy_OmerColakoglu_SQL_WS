@@ -1,6 +1,7 @@
-MSSQL             : TOP
-POSTGRESQL, MYSQL : LIMIT
-ORACLE            : ROWNUM
+MSSQL (T-SQL)	: TOP
+POSTGRESQL	  : LIMIT
+MYSQL	        : LIMIT
+ORACLE	      : ROWNUM
 
 
 
