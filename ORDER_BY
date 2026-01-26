@@ -1,3 +1,18 @@
+Because ASC (ascending) is the default.
+
+SELECT * FROM CUSTOMER
+WHERE City = 'Elazığ'
+ORDER BY CustomerName
+
+SELECT * FROM CUSTOMER
+WHERE City = 'Elazığ'
+ORDER BY CustomerName Asc
+
+SELECT * FROM CUSTOMER
+WHERE City = 'Elazığ'
+ORDER BY CustomerName Desc
+
+
 SELECT DISTINCT CITY
 FROM CUSTOMER
 ORDER BY CITY ASC
@@ -29,4 +44,22 @@ SELECT *
 FROM CUSTOMER
 ORDER BY 1,8
 
--- The first column is ID and the eighth column is AGE
+-- The first column is ID, and the eighth column is AGE
+
+
+SELECT CustomerName, Age, City
+FROM CUSTOMER
+ORDER BY Age ASC, City DESC
+
+
+SELECT *
+FROM CUSTOMER
+ORDER BY 3 DESC
+-- The 3rd column is City
+
+
+SELECT *
+FROM CUSTOMER
+ORDER BY 3 DESC, 4 DESC
+-- The 3rd column is City and 4th column is District
+
